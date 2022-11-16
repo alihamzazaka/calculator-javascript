@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=denet/npm/vice-width, initial-scale=1.0"
+    />
+    <title>Ali Hamza (Calculator)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <script>
+      function put(num) {
+        document.form.textview.value = document.form.textview.value + num;
+      }
+
+      function equalto() {
+        var equ = document.form.textview.value;
+        try {
+          if (equ) {
+            document.form.textview2.value = eval(equ);
+          }
+        } catch (err) {
+          document.form.textview2.value = "MATH ERROR";
+        }
+      }
+    </script>
+
+    <title>Document</title>
+
+    <style>
+      .background {
+        width: 400px;
+
+        background-color: #f8f9fa;
+        margin: auto;
+        border-radius: 20px;
+      }
+
+      .button {
+        margin-left: 5px;
+        background-color: #f0e8e5;
+        border-radius: 0%;
+        font-size: 30px;
+        margin-bottom: 4px;
+        width: 90px;
+        border-radius: 50px;
+        color: #93492a;
+      }
+      #btn-zero {
+        margin-left: 5px;
+        border-radius: 0%;
+        font-size: 30px;
+        margin-bottom: 4px;
+        width: 190px;
+        background-color: #f0e8e5;
+        border-radius: 50px;
+        color: #93492a;
+      }
+
+      #btn-equal {
+        margin-left: 5px;
+        border-radius: 0%;
+        font-size: 30px;
+        margin-bottom: 4px;
+        width: 190px;
+        background-color: #396475;
+        border-radius: 50px;
+        color: white;
+      }
+
+      #btn-plus {
+        margin-left: 5px;
+        height: 200px;
+        background-color: #f0e8e5;
+        border-radius: 0%;
+        font-size: 30px;
+        color: #396475;
+        margin-bottom: 4px;
+        width: 90px;
+        border-radius: 50px;
+      }
+      .textone {
+        width: 390px;
+        margin: px;
+        height: 85px;
+        border-radius: 10px 10px 0 0;
+        text-align: start;
+        font-size: 30px;
+        border: 0ch;
+        padding-left: 20px;
+        margin-left: 5px;
+        margin-top: 5px;
+        background-color: white;
+        color: #93492a;
+      }
+      .texttwo {
+        width: 390px;
+        margin-left: 5px;
+        height: 85px;
+        margin-bottom: 10px;
+        border-radius: 0 0 10px 10px;
+        text-align: start;
+        font-size: 30px;
+        border: 0ch;
+        padding-right: 20px;
+        background-color: white;
+        color: #93492a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <form name="form">
+        <input class="textone fa-solid" type="text" name="textview" disabled />
+        <input
+          class="texttwo text-end fa-solid"
+          type="text"
+          name="textview2"
+          disabled
+        />
+        <table>
+          <div class="col">
+            <tr>
+              <td>
+                <input
+                  type="button"
+                  value="7"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put(7)"
+                />
+              </td>
+              <td>
+                <input
+                  type="button"
+                  value="8"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put(8)"
+                />
+              </td>
+              <td>
+                <input
+                  type="button"
+                  value="9"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="9"
+                />
+              </td>
+
+              <td>
+                <input
+                  type="button"
+                  value="x"
+                  style="color: #396475"
+                  class="btn button align-content-center p-4 fa-solid fa-multiply"
+                  onclick="put('*')"
+                />
+              </td>
+            </tr>
+          </div>
+
+          <div class="col">
+            <tr>
+              <td>
+                <input
+                  type="button"
+                  value="4"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put(4)"
+                />
+              </td>
+
+              <td>
+                <input
+                  type="button"
+                  value="5"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put(5)"
+                />
+              </td>
+
+              <td>
+                <input
+                  type="button"
+                  value="6"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put(6)"
+                />
+              </td>
+
+              <td>
+                <input
+                  type="button"
+                  value="/"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put('/')"
+                  style="color: #396475"
+                />
+              </td>
+            </tr>
+          </div>
+
+          <div class="col">
+            <tr>
+              <td>
+                <input
+                  type="button"
+                  value="1"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put(1)"
+                />
+              </td>
+
+              <td>
+                <input
+                  type="button"
+                  value="2"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put(2)"
+                />
+              </td>
+
+              <td>
+                <input
+                  type="button"
+                  value="3"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put(3)"
+                />
+              </td>
+
+              <td>
+                <input
+                  type="button"
+                  value="-"
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put('-')"
+                  style="color: #396475"
+                />
+              </td>
+            </tr>
+          </div>
+
+          <div class="col">
+            <tr>
+              <td colspan="2">
+                <input
+                  type="button"
+                  value="0"
+                  id="btn-zero"
+                  class="btn align-content-center p-4 fa-solid"
+                  onclick="put(0)"
+                />
+              </td>
+
+              <td>
+                <input
+                  type="button"
+                  value="."
+                  class="btn button align-content-center p-4 fa-solid"
+                  onclick="put('.')"
+                />
+              </td>
+
+              <td rowspan="2">
+                <input
+                  type="button"
+                  value="+"
+                  id="btn-plus"
+                  class="btn align-content-center p-4 fa-solid"
+                  onclick="put('+')"
+                />
+              </td>
+            </tr>
+          </div>
+          <div class="col">
+            <tr>
+              <td>
+                <input
+                  type="button"
+                  value="C"
+                  class="btn button align-content-center p-4 fa-solid"
+                  style="color: red"
+                  onclick="form.textview.value='', form.textview2.value=''"
+                />
+              </td>
+
+              <td colspan="2">
+                <input
+                  type="button"
+                  value="="
+                  id="btn-equal"
+                  class="btn align-content-center p-4 fa-solid"
+                  onclick="equalto()"
+                />
+              </td>
+            </tr>
+          </div>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
